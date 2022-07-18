@@ -1,0 +1,17 @@
+[
+  {
+    "_id": "e4972057-7698-40f8-a48b-354e1b9ae6d1",
+    "colName": "06-blogs-api",
+    "created": "2022-07-18T20:13:55.530Z",
+    "sortNum": 10000,
+    "folders": [
+      {
+        "_id": "86c150df-16bc-43bc-a373-34efee93575e",
+        "name": "login",
+        "containerId": "",
+        "created": "2022-07-18T21:30:51.988Z",
+        "sortNum": 10000
+      }
+    ]
+  }
+]
