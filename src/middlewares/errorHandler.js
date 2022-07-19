@@ -1,6 +1,8 @@
 const errors = {
   UnauthorizedError: 400,
+  ValidationError: 400,
   NotFoundError: 404,
+  UserAlreadyExists: 409,
 };
 
 const errorHandler = ({ name, message }, _req, res, _next) => {
