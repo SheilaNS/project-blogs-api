@@ -3,7 +3,7 @@ const Joi = require('joi');
 const jwt = require('jsonwebtoken');
 const errors = require('./utils');
 
-const secret = process.env.JWT_SECRET || 'secret';
+const secret = process.env.JWT_SECRET;
 
 const authService = {
   bodyValidate: async (data) => {
@@ -23,8 +23,7 @@ const authService = {
     const schema = Joi.string().required();
     try {
       const result = await schema.validateAsync(data);
-      const [, token] = result.split(' ');
-      return token;      
+      return result;      
     } catch (error) {
       errors.tokenNotFound();
     }
@@ -40,6 +39,8 @@ const authService = {
   readToken: async (token) => {
     try {
       const { data } = jwt.verify(token, secret);
+      console.log(data);
+      console.log(secret);
       return data;
     } catch (error) {
       errors.invalidToken();

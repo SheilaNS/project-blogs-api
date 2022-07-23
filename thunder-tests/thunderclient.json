@@ -46,12 +46,16 @@
     "method": "GET",
     "sortNum": 30000,
     "created": "2022-07-23T14:45:37.818Z",
-    "modified": "2022-07-23T15:48:19.451Z",
-    "headers": [],
+    "modified": "2022-07-23T16:22:09.448Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJkaXNwbGF5TmFtZSI6Ikxld2lzIEhhbWlsdG9uIn0sImlhdCI6MTY1ODU5MzE5N30.tsGAJkVtlMLWyP2IavkrKbQSH7gC5RCPIEN9nYylgnY"
+      }
+    ],
     "params": [],
     "auth": {
-      "type": "bearer",
-      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJkaXNwbGF5TmFtZSI6Ikxld2lzIEhhbWlsdG9uIn0sImlhdCI6MTY1ODU5MTI4NH0.RZ3WeSmQ1m1OONnuMh8IM0w_eMcRHvcHk8UyslLYB9E"
+      "type": "bearer"
     },
     "tests": []
   }
