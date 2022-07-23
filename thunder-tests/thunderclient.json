@@ -77,5 +77,29 @@
     ],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "123a5fd1-2eb4-4259-9ad2-60e7fa352fcd",
+    "colId": "e4972057-7698-40f8-a48b-354e1b9ae6d1",
+    "containerId": "81bfa528-914c-4004-b71c-9b08e25b3757",
+    "name": "addCategory",
+    "url": "localhost:3000/categories",
+    "method": "POST",
+    "sortNum": 50000,
+    "created": "2022-07-23T20:38:21.692Z",
+    "modified": "2022-07-23T20:59:21.178Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJkaXNwbGF5TmFtZSI6Ikxld2lzIEhhbWlsdG9uIn0sImlhdCI6MTY1ODU5MzA3NX0.4nBZWFCtDbe95hIwBd1r5QwNFs95wszzpxusduonzn0"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Typescript\"\n}",
+      "form": []
+    },
+    "tests": []
   }
 ]
