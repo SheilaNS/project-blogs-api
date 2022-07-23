@@ -41,7 +41,7 @@
     "_id": "c20d07ed-0136-42da-a3e0-852463c04cd9",
     "colId": "e4972057-7698-40f8-a48b-354e1b9ae6d1",
     "containerId": "a6791ef6-cd1a-45fe-853e-bf10ac586632",
-    "name": "getAllUsers",
+    "name": "listUsers",
     "url": "localhost:3000/user",
     "method": "GET",
     "sortNum": 30000,
@@ -57,6 +57,25 @@
     "auth": {
       "type": "bearer"
     },
+    "tests": []
+  },
+  {
+    "_id": "a4a036ee-b367-493a-9605-2678fb538ee8",
+    "colId": "e4972057-7698-40f8-a48b-354e1b9ae6d1",
+    "containerId": "a6791ef6-cd1a-45fe-853e-bf10ac586632",
+    "name": "getUser",
+    "url": "localhost:3000/user/5",
+    "method": "GET",
+    "sortNum": 40000,
+    "created": "2022-07-23T17:15:05.813Z",
+    "modified": "2022-07-23T17:20:58.152Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJkaXNwbGF5TmFtZSI6Ikxld2lzIEhhbWlsdG9uIn0sImlhdCI6MTY1ODU5MzA3NX0.4nBZWFCtDbe95hIwBd1r5QwNFs95wszzpxusduonzn0"
+      }
+    ],
+    "params": [],
     "tests": []
   }
 ]

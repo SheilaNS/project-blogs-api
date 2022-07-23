@@ -39,8 +39,6 @@ const authService = {
   readToken: async (token) => {
     try {
       const { data } = jwt.verify(token, secret);
-      console.log(data);
-      console.log(secret);
       return data;
     } catch (error) {
       errors.invalidToken();

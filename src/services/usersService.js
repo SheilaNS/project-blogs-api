@@ -48,6 +48,16 @@ const usersService = {
     });
     return users;
   },
+
+  get: async (id) => {
+    const user = await models.User.findOne({
+      where: { id },
+      raw: true,
+      attributes: { exclude: ['password'] },
+    });
+    if (!user) errors.notFound('User does not exist');
+    return user;
+  },
 };
 
 module.exports = usersService;
