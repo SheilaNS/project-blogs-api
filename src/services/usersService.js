@@ -1,6 +1,6 @@
 const Joi = require('joi');
 const models = require('../database/models');
-const { unauthorized, validationError, userAlreadyExists } = require('./utils');
+const errors = require('./utils');
 
 const usersService = {
   bodyValidate: async (data) => {
@@ -14,7 +14,7 @@ const usersService = {
       const result = await schema.validateAsync(data);
       return result;
     } catch (error) {
-      validationError(error);
+      errors.validationError(error);
     }
   },
 
@@ -23,7 +23,7 @@ const usersService = {
       where: { email },
       raw: true,
     });
-    if (user) userAlreadyExists('User already registered');
+    if (user) errors.userAlreadyExists('User already registered');
   },
 
   getByEmail: async (email, password) => {
@@ -31,7 +31,7 @@ const usersService = {
       where: { email, password },
       raw: true,
     });
-    if (!user) unauthorized('Invalid fields');
+    if (!user) errors.unauthorized('Invalid fields');
     return user;
   },
 
@@ -40,6 +40,13 @@ const usersService = {
     const newUser = model.toJSON();
     const { password, ...user } = newUser;
     return user;
+  },
+
+  getAll: async () => {
+    const users = await models.User.findAll({
+      attributes: { exclude: ['password'] },
+    });
+    return users;
   },
 };
 

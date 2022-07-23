@@ -3,6 +3,8 @@ const errors = {
   ValidationError: 400,
   NotFoundError: 404,
   UserAlreadyExists: 409,
+  TokenNotFoundError: 401,
+  ExpiredOrInvalidTokenError: 401,
 };
 
 const errorHandler = ({ name, message }, _req, res, _next) => {

@@ -1,7 +1,7 @@
 require('dotenv').config();
 const Joi = require('joi');
 const jwt = require('jsonwebtoken');
-const { unauthorized } = require('./utils');
+const errors = require('./utils');
 
 const secret = process.env.JWT_SECRET || 'secret';
 
@@ -15,7 +15,18 @@ const authService = {
       const result = await schema.validateAsync(data);
       return result;
     } catch (error) {
-      unauthorized('Some required fields are missing');
+      errors.unauthorized('Some required fields are missing');
+    }
+  },
+
+  tokenValidade: async (data) => {
+    const schema = Joi.string().required();
+    try {
+      const result = await schema.validateAsync(data);
+      const [, token] = result.split(' ');
+      return token;      
+    } catch (error) {
+      errors.tokenNotFound();
     }
   },
 
@@ -31,7 +42,7 @@ const authService = {
       const { data } = jwt.verify(token, secret);
       return data;
     } catch (error) {
-      unauthorized('Invalid fields');
+      errors.invalidToken();
     }
   },
 };

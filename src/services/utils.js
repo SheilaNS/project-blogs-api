@@ -16,6 +16,18 @@ const userAlreadyExists = (message) => {
   throw err;
 };
 
+const tokenNotFound = (message = 'Token not found') => {
+  const err = new Error(message);
+  err.name = 'TokenNotFoundError';
+  throw err;
+};
+
+const invalidToken = (message = 'Expired or invalid token') => {
+  const err = new Error(message);
+  err.name = 'ExpiredOrInvalidTokenError';
+  throw err;
+};
+
 const validationError = (err) => {
   const error = err;
   error.name = 'ValidationError';
@@ -27,4 +39,6 @@ module.exports = {
   unauthorized,
   validationError,
   userAlreadyExists,
+  tokenNotFound,
+  invalidToken,
 };
