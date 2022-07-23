@@ -64,11 +64,11 @@
     "colId": "e4972057-7698-40f8-a48b-354e1b9ae6d1",
     "containerId": "a6791ef6-cd1a-45fe-853e-bf10ac586632",
     "name": "getUser",
-    "url": "localhost:3000/user/5",
+    "url": "localhost:3000/user/1",
     "method": "GET",
     "sortNum": 40000,
     "created": "2022-07-23T17:15:05.813Z",
-    "modified": "2022-07-23T17:20:58.152Z",
+    "modified": "2022-07-23T17:24:43.019Z",
     "headers": [
       {
         "name": "Authorization",
