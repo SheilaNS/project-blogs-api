@@ -1,3 +1,4 @@
+const tokenValidade = require('../middlewares/tokenValidate');
 const authService = require('../services/authorizationService');
 const usersService = require('../services/usersService');
 
@@ -11,16 +12,14 @@ const userController = {
   },
 
   getAll: async (req, res) => {
-    const token = await authService.tokenValidade(req.headers.authorization);
-    await authService.readToken(token);
+    await tokenValidade(req.headers.authorization);
     const users = await usersService.getAll();
     res.status(200).json(users);
   },
 
   get: async (req, res) => {
     const { id } = req.params;
-    const token = await authService.tokenValidade(req.headers.authorization);
-    await authService.readToken(token);
+    await tokenValidade(req.headers.authorization);
     const user = await usersService.get(id);
     res.status(200).json(user);
   },

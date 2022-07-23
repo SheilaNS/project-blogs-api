@@ -29,6 +29,11 @@ const categoryService = {
     if (!category) errors.notFound('Category does not exist');
     return category;
   },
+
+  getAll: async () => {
+    const categories = await models.Category.findAll();
+    return categories;
+  },
 };
 
 module.exports = categoryService;

@@ -87,11 +87,11 @@
     "method": "POST",
     "sortNum": 50000,
     "created": "2022-07-23T20:38:21.692Z",
-    "modified": "2022-07-23T20:59:21.178Z",
+    "modified": "2022-07-23T21:28:18.807Z",
     "headers": [
       {
         "name": "Authorization",
-        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJkaXNwbGF5TmFtZSI6Ikxld2lzIEhhbWlsdG9uIn0sImlhdCI6MTY1ODU5MzA3NX0.4nBZWFCtDbe95hIwBd1r5QwNFs95wszzpxusduonzn0"
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJkaXNwbGF5TmFtZSI6Ikxld2lzIEhhbWlsdG9uIn0sImlhdCI6MTY1ODYxMTY1MX0.G5ALMqckkY8x8d0KCfCm_6DXTGmSAej_bjKqx47e_7w"
       }
     ],
     "params": [],
@@ -100,6 +100,25 @@
       "raw": "{\n  \"name\": \"Typescript\"\n}",
       "form": []
     },
+    "tests": []
+  },
+  {
+    "_id": "f8beca72-12c9-47bd-ac0c-b56175fe46eb",
+    "colId": "e4972057-7698-40f8-a48b-354e1b9ae6d1",
+    "containerId": "81bfa528-914c-4004-b71c-9b08e25b3757",
+    "name": "listCategory",
+    "url": "localhost:3000/categories",
+    "method": "GET",
+    "sortNum": 60000,
+    "created": "2022-07-23T21:40:15.912Z",
+    "modified": "2022-07-23T21:42:48.292Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJkaXNwbGF5TmFtZSI6Ikxld2lzIEhhbWlsdG9uIn0sImlhdCI6MTY1ODYxMTY1MX0.G5ALMqckkY8x8d0KCfCm_6DXTGmSAej_bjKqx47e_7w"
+      }
+    ],
+    "params": [],
     "tests": []
   }
 ]
