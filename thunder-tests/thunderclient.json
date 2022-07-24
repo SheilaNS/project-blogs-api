@@ -120,5 +120,29 @@
     ],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "8c39a971-efc7-4c20-aafe-92579b728f11",
+    "colId": "e4972057-7698-40f8-a48b-354e1b9ae6d1",
+    "containerId": "8f0b7b49-0b9c-4b1e-9d98-efb8e5c9bc12",
+    "name": "addPost",
+    "url": "localhost:3000/post",
+    "method": "POST",
+    "sortNum": 70000,
+    "created": "2022-07-24T17:46:29.055Z",
+    "modified": "2022-07-24T21:43:20.336Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJkaXNwbGF5TmFtZSI6Ikxld2lzIEhhbWlsdG9uIn0sImlhdCI6MTY1ODY4NDg3M30.6EOoIaTcNWiJ09h7dTMGeCJyjxdafehKhMYzPWDEVxg"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\": \"Latest updates, August 1st\",\n  \"content\": \"The whole text for the blog post goes here in this key\",\n  \"categoryIds\": [1, 2]\n}",
+      "form": []
+    },
+    "tests": []
   }
 ]

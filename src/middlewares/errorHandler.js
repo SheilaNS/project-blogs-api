@@ -5,6 +5,7 @@ const errors = {
   UserAlreadyExists: 409,
   TokenNotFoundError: 401,
   ExpiredOrInvalidTokenError: 401,
+  SequelizeDatabaseError: 500,
 };
 
 const errorHandler = ({ name, message }, _req, res, _next) => {

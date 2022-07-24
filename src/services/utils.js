@@ -22,6 +22,12 @@ const tokenNotFound = (message = 'Token not found') => {
   throw err;
 };
 
+const noSuccess = (message) => {
+  const err = new Error(message);
+  err.name = 'SequelizeDatabaseError';
+  throw err;
+};
+
 const invalidToken = (message = 'Expired or invalid token') => {
   const err = new Error(message);
   err.name = 'ExpiredOrInvalidTokenError';
@@ -41,4 +47,5 @@ module.exports = {
   userAlreadyExists,
   tokenNotFound,
   invalidToken,
+  noSuccess,
 };

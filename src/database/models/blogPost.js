@@ -1,5 +1,6 @@
 'use strict';
 const { Model, DataTypes } = require('sequelize');
+const { underscore } = require('sequelize/lib/utils');
 
 /** @type {import('sequelize').ModelAttributes} */
 const attributes = {
@@ -28,17 +29,19 @@ const attributes = {
   published: {
     type: DataTypes.DATE,
     allowNull: false,
+    defaultValue: DataTypes.DATE,
   },
   updated: {
     type: DataTypes.DATE,
     allowNull: false,
+    defaultValue: DataTypes.DATE,
   },
 };
 
 /** @param {import('sequelize').Sequelize} sequelize */
 module.exports = (sequelize) => {
   const BlogPost = sequelize.define('BlogPost', attributes, {
-    tableName: 'BlogPosts'
+    tableName: 'BlogPosts',
   });
   BlogPost.associate = (models) => {
     BlogPost.belongsTo(models.User, {
