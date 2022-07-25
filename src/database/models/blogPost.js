@@ -29,18 +29,18 @@ const attributes = {
   published: {
     type: DataTypes.DATE,
     allowNull: false,
-    defaultValue: DataTypes.DATE,
   },
   updated: {
     type: DataTypes.DATE,
     allowNull: false,
-    defaultValue: DataTypes.DATE,
   },
 };
 
 /** @param {import('sequelize').Sequelize} sequelize */
 module.exports = (sequelize) => {
   const BlogPost = sequelize.define('BlogPost', attributes, {
+    createdAt: 'published',
+    updatedAt: 'updated',
     tableName: 'BlogPosts',
   });
   BlogPost.associate = (models) => {

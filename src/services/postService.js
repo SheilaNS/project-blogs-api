@@ -28,22 +28,19 @@ const postService = {
     return exists;
   },
 
+  // aplicação de bulkCreate com a ajuda do Leonardo Araujo e Imar Mendes
   add: async (data, id) => {
+    const t = await sequelize.transaction();
     try {
-      const { title, content } = data;
-      const result = await sequelize.transaction(async (t) => {
-        const post = await models.BlogPost.create({
-          title,
-          content,
-          userId: id,
-        },
-        { transaction: t });
-        data.categoryIds.forEache(async (elem) => {
-          await models.PostCategory.create({ postId: post.id, categoryId: elem });
-        });
-      });
-      return result;
+      const { title, content, categoryIds } = data;
+      const post = await models.BlogPost.create({ title, content, userId: id },
+      { transaction: t });
+      const array = categoryIds.map((elem) => ({ postId: post.dataValues.id, categoryId: elem }));
+      await models.PostCategory.bulkCreate(array, { transaction: t });
+      await t.commit();
+      return post;
     } catch (error) {
+      await t.rollback();
       errors.noSuccess(error.message);
     }
   },

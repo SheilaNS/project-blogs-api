@@ -32,12 +32,10 @@ module.exports = {
       published: {
         type: Sequelize.DATE,
         allowNull: false,
-        defaultValue: Sequelize.DATE,
       },
       updated: {
         type: Sequelize.DATE,
         allowNull: false,
-        defaultValue: Sequelize.DATE,
       },
         })
   },
