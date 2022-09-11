@@ -9,6 +9,12 @@ const postController = {
     const post = await postService.add(data, userId);
     res.status(201).json(post);
   },
+
+  list: async (req, res) => {
+    await tokenValidade(req.headers.authorization);
+    const posts = await postService.list();
+    res.status(200).json(posts);
+  },
 };
 
 module.exports = postController;

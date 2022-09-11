@@ -144,5 +144,24 @@
       "form": []
     },
     "tests": []
+  },
+  {
+    "_id": "4d86b0b8-5797-4a07-b800-4b96a7143f8e",
+    "colId": "e4972057-7698-40f8-a48b-354e1b9ae6d1",
+    "containerId": "8f0b7b49-0b9c-4b1e-9d98-efb8e5c9bc12",
+    "name": "listPosts",
+    "url": "localhost:3000/post",
+    "method": "GET",
+    "sortNum": 80000,
+    "created": "2022-07-27T00:34:15.951Z",
+    "modified": "2022-07-27T00:34:39.152Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJkaXNwbGF5TmFtZSI6Ikxld2lzIEhhbWlsdG9uIn0sImlhdCI6MTY1ODg4MjAzNn0.FCvYzI80O1ihOQnkUQ-TGIHnLczB3mOvr2kAmSI_z5s"
+      }
+    ],
+    "params": [],
+    "tests": []
   }
 ]

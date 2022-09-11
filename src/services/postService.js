@@ -44,6 +44,17 @@ const postService = {
       errors.noSuccess(error.message);
     }
   },
+
+  list: async () => {
+    const post = await models.BlogPost.findAll({
+      include: {
+        model: models.User,
+        as: 'User',
+        attributes: { exclude: ['password'] },
+      },
+    });
+    return post;
+  },
 };
 
 module.exports = postService;
